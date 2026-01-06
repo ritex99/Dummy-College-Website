@@ -1,0 +1,71 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f9;
+    margin: 0;
+}
+
+/* LOGIN */
+.login-container {
+    width: 350px;
+    margin: 120px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 6px;
+    text-align: center;
+}
+
+.login-container input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.login-container button {
+    width: 100%;
+    padding: 10px;
+    background: #0b5ed7;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#errorMsg {
+    color: red;
+    margin-top: 10px;
+}
+
+/* DASHBOARD */
+.admin-header {
+    background: #0b5ed7;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.admin-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    padding: 30px;
+}
+
+.admin-card {
+    background: white;
+    padding: 20px;
+    border-radius: 6px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.admin-card button {
+    margin-top: 10px;
+    padding: 8px 15px;
+    background: #0b5ed7;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+

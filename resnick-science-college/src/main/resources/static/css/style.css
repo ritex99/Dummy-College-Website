@@ -1,0 +1,847 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* RESPONSIVE NAVBAR */
+@media (max-width: 768px) {
+
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav a {
+        padding: 10px 0;
+        border-top: 1px solid rgba(255,255,255,0.2);
+    }
+}
+
+/* HEADER */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #2bd86e;
+    color: white;
+    padding: 12px 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    height: 40px;
+}
+
+nav a {
+    color: white;
+    margin-left: 15px;
+    text-decoration: none;
+}
+
+/* HERO */
+.hero {
+    height: 60vh;
+    background: url("Resnick Logo.jpg") center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-text {
+    background: rgba(0,0,0,0.6);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* SECTIONS */
+.section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.list p {
+    font-size: 18px;
+}
+
+/* TOP NEWS BAR */
+.news-bar {
+    background: #f78d47;
+    color: white;
+    display: flex;
+    align-items: center;
+    height: 35px;
+    overflow: hidden;
+    font-size: 14px;
+}
+
+.news-label {
+    background: #084298;
+    padding: 0 15px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.news-slider {
+    flex: 1;
+    overflow: hidden;
+}
+
+.news-track {
+    display: inline-flex;
+    white-space: nowrap;
+    animation: scrollNews 20s linear infinite;
+}
+
+.news-track span {
+    margin-right: 50px;
+}
+
+/* Animation */
+@keyframes scrollNews {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+/* OUR TEACHERS */
+
+.teachers-section {
+    padding: 60px 20px;
+    background: #f8fafc;
+    text-align: center;
+}
+
+.teacher-list {
+    max-width: 900px;
+    margin: 40px auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* Teacher Card */
+.teacher-card {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Teacher Photo */
+.teacher-card img {
+    width: 140px;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 3px solid #dadbde;
+    flex-shrink: 0;
+}
+
+/* Teacher Info */
+.teacher-info {
+    text-align: left;
+}
+
+.teacher-info h4 {
+    margin: 0 0 8px;
+    color: #000000;
+    font-size: 18px;
+}
+
+.teacher-info p {
+    margin: 4px 0;
+    font-size: 15px;
+    color: #000000;
+}
+
+/* MOBILE VIEW*/
+@media (max-width: 768px) {
+
+    .teacher-card {
+        gap: 15px;
+        padding: 18px;
+    }
+
+    .teacher-card img {
+        width: 90px;
+        height: 110px;
+    }
+
+    .teacher-info h4 {
+        font-size: 16px;
+    }
+
+    .teacher-info p {
+        font-size: 14px;
+    }
+}
+
+/* BOOK STYLE SUBJECTS */
+.book-shelf {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.book {
+    width: 220px;
+    height: 280px;
+    perspective: 1000px;
+    position: relative;
+}
+
+.book-cover {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #1b4332d9, #52b788dd);
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    cursor: pointer;
+    transform-origin: left;
+    transition: transform 0.8s ease;
+    position: absolute;
+    z-index: 2;
+}
+
+.book-content {
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    position: absolute;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.book-content h3 {
+    margin-top: 0;
+    color: #0b5ed7;
+}
+
+.book-content p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* OPEN BOOK EFFECT */
+.book:hover .book-cover {
+    transform: rotateY(-140deg);
+}
+
+.book:hover .book-content {
+    opacity: 1;
+}
+
+/* PHOTO GALLERY */
+.gallery-section {
+    padding: 60px 20px;
+    background: #ffffff;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+
+.section-subtitle {
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* ACHIEVERS SECTION */
+.achievers-section {
+    padding: 60px 20px;
+    background: #f5f8fc;
+    text-align: center;
+}
+
+.achievers-grid {
+    max-width: 1100px;
+    margin: 40px auto 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px;
+}
+
+.achiever-card {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+}
+
+.achiever-card:hover {
+    transform: translateY(-6px);
+}
+
+.achiever-card img {
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    border: 4px solid #0b5ed7;
+}
+
+.achiever-card h3 {
+    margin: 10px 0 5px;
+    font-size: 18px;
+}
+
+.percentage {
+    font-size: 20px;
+    font-weight: bold;
+    color: #0b5ed7;
+}
+
+/* Grid Layout */
+
+.gallery-grid {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 6px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+
+/* FOOTER */
+.footer {
+    background: #686f40; 
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+/* COLLEGE STATS COUNTER */
+
+.stats-section {
+    background: #ffffff;
+    padding: 60px 20px;
+}
+
+.stats-container {
+    max-width: 1000px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    text-align: center;
+}
+
+.stat-box h2 {
+    font-size: 48px;
+    color: #2e2a7b; /* deep academic blue */
+    margin-bottom: 8px;
+}
+
+.stat-box p {
+    font-size: 18px;
+    color: #555;
+    font-weight: 500;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .stat-box h2 {
+        font-size: 36px;
+    }
+
+    .stat-box p {
+        font-size: 16px;
+    }
+}
+
+/* DIRECTOR MESSAGE SECTION */
+@media (max-width: 768px) {
+
+    .director-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .director-photo img {
+        width: 180px;
+        height: auto;
+    }
+}
+
+.director-section {
+    background: #f4f4ec;
+    color: #f1f1f1;
+    padding: 60px 20px;
+}
+
+.director-container {
+    max-width: 900px;
+    margin: auto;
+}
+
+.director-heading {
+    text-transform: uppercase;
+    font-size: 20px;
+    margin-bottom: 25px;
+    border-left: 4px solid #0b5ed7;
+    padding-left: 12px;
+    letter-spacing: 1px;
+}
+
+.director-message p {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #000000;
+}
+
+.director-signature {
+    margin-top: 30px;
+}
+
+.director-name {
+    font-weight: bold;
+    font-size: 17px;
+    color: #ffffff;
+}
+
+.director-title {
+    font-size: 14px;
+    color: #0d0c0c;
+}
+
+.notice-section {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.notice-subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.notice-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.notice-item {
+    background: #f9f9f9;
+    padding: 20px;
+    border-left: 5px solid #0b5ed7;
+    border-radius: 4px;
+}
+
+.notice-date {
+    font-size: 13px;
+    color: #555;
+}
+
+/* DOWNLOAD CENTER */
+.download-section {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.download-subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.download-list {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.download-item {
+    background: #f9f9f9;
+    padding: 25px;
+    border-left: 5px solid #0b5ed7;
+    border-radius: 4px;
+}
+
+.download-item h3 {
+    margin-top: 0;
+}
+
+.download-item p {
+    margin: 10px 0 15px;
+}
+
+.download-btn {
+    display: inline-block;
+    background: #0b5ed7;
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+/* ADMIN LOGIN */
+.admin-login-section {
+    width: 350px;
+    margin: 100px auto;
+    padding: 30px;
+    border: 1px solid #ccc;
+    text-align: center;
+    border-radius: 6px;
+}
+
+.admin-login-section input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.admin-login-section button {
+    width: 100%;
+    padding: 10px;
+    background: #0b5ed7;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#error-msg {
+    color: red;
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+
+    h1 { font-size: 26px; }
+    h2 { font-size: 22px; }
+    p  { font-size: 15px; }
+
+    .section {
+        padding: 40px 15px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .teacher-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .director-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .gallery-grid img {
+        height: 180px;
+    }
+
+    .achiever-card img {
+        width: 110px;
+        height: 110px;
+    }
+}
+
+/* ADMISSION IN-CHARGE SECTION */
+.fees-table-wrapper {
+    max-width: 1000px;
+    margin: 40px auto;     /* THIS centers the table */
+    display: flex;
+    justify-content: center;
+    overflow-x: auto;      /* keeps mobile safe */
+}
+
+.fees-table {
+    width: 100%;
+    max-width: 900px;
+}
+
+.admission-section {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.admission-section h3 {
+    margin-bottom: 25px;
+    color: #000000;
+}
+
+.admission-card {
+    max-width: 700px;
+    margin: auto;
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    background: #f9f9f9;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.admission-card img {
+    width: 140px;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 3px solid #ffffff;
+}
+
+.admission-info {
+    text-align: left;
+}
+
+.admission-info h4 {
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+.contact-line {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* MOBILE FRIENDLY */
+@media (max-width: 768px) {
+    .admission-card {
+        flex-direction: row;
+        gap: 15px;
+    }
+
+    .admission-card img {
+        width: 90px;
+        height: 110px;
+    }
+
+    .admission-info p {
+        font-size: 14px;
+    }
+}
+/* FEES DOWNLOAD BUTTON */
+
+.fees-section {
+    text-align: center;
+}
+
+.fees-note {
+    text-align: center;
+}
+
+.fees-download {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.download-btn {
+    display: inline-block;
+    background: #0b5ed7;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.download-btn:hover {
+    background: #0949a5;
+}
+
+/* GALLERY LOGO SLIDER*/
+
+.gallery-slider-section {
+    padding: 60px 20px;
+    background: #e0e0e0;
+    text-align: center;
+}
+
+.slider-container {
+    position: relative;
+    max-width: 1100px;
+    margin: 30px auto;
+    overflow: hidden;
+}
+
+.slider-track {
+    display: flex;
+    transition: transform 0.6s ease;
+}
+
+.slider-track img {
+    min-width: 20%;
+    height: 100px;
+    object-fit: contain;
+    padding: 10px 20px;
+}
+
+/* Arrows */
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #333;
+    z-index: 2;
+}
+
+.slider-btn.prev { left: 10px; }
+.slider-btn.next { right: 10px; }
+
+/* Dots */
+.slider-dots {
+    margin-top: 15px;
+}
+
+.slider-dots span {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin: 0 4px;
+    background: #999;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.slider-dots span.active {
+    background: #000;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .slider-track img {
+        min-width: 50%;
+        height: 80px;
+    }
+}
+/* SOCIAL MEDIA ICONS */
+i {
+  font-size: 22px;
+  color: #444;
+  margin: 0 10px;
+}
+
+.fa-facebook { color: #1877F2; }
+.fa-instagram { color: #E4405F; }
+.fa-youtube { color: #FF0000; }
+.fa-linkedin { color: #0A66C2; }
+
+.middle-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Hostel Section Layout */
+.hostel-section {
+  max-width: 900px;
+  margin: 70px auto;
+}
+
+.hostel-section h2 {
+  font-size: 24px;
+  margin-bottom: 25px;
+  color: #2b237c;
+}
+
+/* Cards */
+.hostel-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+
+.hostel-card {
+  background: #ededed;
+  border-radius: 6px;
+  padding: 25px;
+  display: flex;
+  gap: 15px;
+}
+
+/* Gold Accent */
+.hostel-accent {
+  width: 6px;
+  background: #e1b457;
+  border-radius: 4px;
+}
+
+/* Text */
+.hostel-content h3 {
+  margin: 0 0 10px;
+  color: #2b237c;
+}
+
+.hostel-content p {
+  margin: 4px 0;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* 🔥 Scroll Animation */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.scroll-reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hostel-wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+
